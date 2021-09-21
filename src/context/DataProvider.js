@@ -16,14 +16,12 @@ function DataProvider({ children }) {
         const filting = body.results.map(({ residents, ...rest }) => rest);
         setData(filting);
       });
-    // const response = await promise;
-    // const body = await response.json();
   };
 
   useEffect(() => getData(), []);
 
   return (
-    <DataContext.Provider value={ { data, setData, getData, filters, setFilters } }>
+    <DataContext.Provider value={ { data, setData, filters, setFilters } }>
       {children}
     </DataContext.Provider>
   );

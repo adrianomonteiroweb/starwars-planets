@@ -54,7 +54,7 @@ describe('1 - Faça uma requisição para o endpoint `/planets` da API de Star W
       const terrain = await screen.findAllByText(planets[planetIndex].terrain);
       const surfaceWater = await screen.findAllByText(planets[planetIndex].surface_water);
       const population = await screen.findAllByText(planets[planetIndex].population);
-      console.log(`name: ${name}`);
+
       expect(name).toBeInTheDocument();
       expect(rotationPeriod.length).toBeGreaterThanOrEqual(1);
       expect(orbitalPeriod.length).toBeGreaterThanOrEqual(1);
