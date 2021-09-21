@@ -18,7 +18,7 @@ function DataProvider({ children }) {
       });
   };
 
-  useEffect(() => getData(), []);
+  useEffect(getData, []);
 
   return (
     <DataContext.Provider value={ { data, setData, filters, setFilters } }>
