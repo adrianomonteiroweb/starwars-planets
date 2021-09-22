@@ -8,7 +8,10 @@ function IsTable() {
   const { data, filters, setFilters } = useContext(DataContext);
   const { filterByName: { name } } = filters;
   const { filterByNumericValues } = filters;
-  const { column, comparison, value } = filterByNumericValues;
+  const {
+    column,
+    comparison,
+    value } = filterByNumericValues[filterByNumericValues.length - 1];
   const headings = data.length > 0 ? Object.keys(data[0]) : [];
   const newData = data.length > 0 ? data : [];
 
@@ -24,20 +27,27 @@ function IsTable() {
   function handleSubmit(e) {
     e.preventDefault();
     const { target: { children } } = e;
-    filterByNumericValues.forEach((filter) => {
-      if (filter.column !== children[1].value) {
-        setFilters({
-          ...filters,
-          filterByNumericValues: [
-            ...filters.filterByNumericValues,
-            {
-              column: children[1].value,
-              comparison: children[2].value,
-              value: children[3].value,
-            }],
-        });
-      }
-    });
+    if (filterByNumericValues[0].column !== '') {
+      setFilters({
+        ...filters,
+        filterByNumericValues: [
+          ...filters.filterByNumericValues,
+          {
+            column: children[1].value,
+            comparison: children[2].value,
+            value: children[3].value,
+          }],
+      });
+    } else {
+      setFilters({
+        ...filters,
+        filterByNumericValues: [{
+          column: children[1].value,
+          comparison: children[2].value,
+          value: children[3].value,
+        }],
+      });
+    }
   }
 
   return (
@@ -49,14 +59,14 @@ function IsTable() {
           placeholder="Planet"
           onChange={ handleChange }
         />
-        <select testid="column-filter" size="sm">
-          <option value="poputation">poputation</option>
+        <select data-testid="column-filter" size="sm">
+          <option value="population">population</option>
           <option value="orbital_period">orbital_period</option>
           <option value="diameter">diameter</option>
           <option value="rotation_period">rotation_period</option>
           <option value="surface_water">surface_water</option>
         </select>
-        <select testid="comparison-filter" size="sm">
+        <select data-testid="comparison-filter" size="sm">
           <option value="maior que">maior que</option>
           <option value="menor que">menor que</option>
           <option value="igual a">igual a</option>
@@ -68,8 +78,6 @@ function IsTable() {
         <button
           type="submit"
           data-testid="button-filter"
-          variant="outline-dark"
-          size="sm"
         >
           Filtrar
         </button>
@@ -84,9 +92,9 @@ function IsTable() {
           { newData
             .filter((isData) => isData.name.includes(name))
             .filter((isData) => (
-              comparison === 'maior que' ? isData[column] > value : isData))
+              comparison === 'maior que' ? isData[column] > Number(value) : isData))
             .filter((isData) => (
-              comparison === 'menor que' ? isData[column] < value : isData))
+              comparison === 'menor que' ? isData[column] < Number(value) : isData))
             .filter((isData) => (
               comparison === 'igual a' ? isData[column] === value : isData))
             .map((isData) => <Tr key={ isData.name } data={ isData } />) }
