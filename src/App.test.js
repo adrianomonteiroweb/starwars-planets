@@ -249,11 +249,11 @@ describe('3 - Crie um filtro para valores numéricos', () => {
   });
 });
 
-describe.skip('4 - Não utilize filtros repetidos', () => {
+describe('4 - Não utilize filtros repetidos', () => {
   beforeAll(mockFetch);
   beforeEach(cleanup);
 
-  it.skip('Filtre por população e o remove das opções', async () => {
+  it('Filtre por população e o remove das opções', async () => {
     await act(async () => {
       render(<App />);
     });

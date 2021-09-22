@@ -48,6 +48,7 @@ function IsTable() {
         }],
       });
     }
+    children[1].children[0].remove();
   }
 
   return (
