@@ -1,39 +1,29 @@
-## Termos e acordos
+# Projeto Starwars Planets Search em context api e hooks!
 
-Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do Manual da Pessoa Estudante da Trybe.
-
-# Boas vindas ao repositório do projeto Starwars Planets Search em context api e hooks!
-
-Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo e, se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
-
-Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir deste repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
-
----
+Projeto de estudos em React no módulo frontend Trybe. 🚀
 
 # Sumário
 
 - [Habilidades](#habilidades)
 - [Entregáveis](#entregáveis)
   - [O que deverá ser desenvolvido](#o-que-deverá-ser-desenvolvido)
-  - [Desenvolvimento](#desenvolvimento)
-  - [Data de entrega](#data-de-entrega)
-- [Instruções para entregar seu projeto:](#instruções-para-entregar-seu-projeto)
-  - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
-  - [Durante o desenvolvimento](#durante-o-desenvolvimento)
-- [Como desenvolver](#como-desenvolver)
   - [Linter](#linter)
 - [Requisitos do projeto](#requisitos-do-projeto)
+
   - [Lista de requisitos](#lista-de-requisitos)
 
     `Requisitos obrigatórios:`
+
     - [1 - Faça uma requisição para o endpoint /planets da API de Star Wars e preencha uma tabela com os dados retornados, com exceção dos da coluna residents](#1---faça-uma-requisição-para-o-endpoint-planets-da-api-de-star-wars-e-preencha-uma-tabela-com-os-dados-retornados-com-exceção-dos-da-coluna-residents)
-    - [2 - Filtre a tabela através de um texto, inserido num *campo de texto*, exibindo somente os planetas cujos nomes incluam o texto digitado](#2---filtre-a-tabela-através-de-um-texto-inserido-num-campo-de-texto-exibindo-somente-os-planetas-cujos-nomes-incluam-o-texto-digitado)
+    - [2 - Filtre a tabela através de um texto, inserido num _campo de texto_, exibindo somente os planetas cujos nomes incluam o texto digitado](#2---filtre-a-tabela-através-de-um-texto-inserido-num-campo-de-texto-exibindo-somente-os-planetas-cujos-nomes-incluam-o-texto-digitado)
     - [3 - Crie um filtro para valores numéricos](#3---crie-um-filtro-para-valores-numéricos)
     - [4 - Não utilize filtros repetidos](#4---não-utilize-filtros-repetidos)
     - [5 - Apague o filtro de valores numéricos e desfaça as filtragens dos dados da tabela ao clicar no ícone de X de um dos filtros](#5---apague-o-filtro-de-valores-numéricos-e-desfaça-as-filtragens-dos-dados-da-tabela-ao-clicar-no-ícone-de-x-de-um-dos-filtros)
-    
+
     `Requisitos bônus:`
+
     - [6 - Ordene as colunas de forma ascendente ou descendente](#6---ordene-as-colunas-de-forma-ascendente-ou-descendente)
+
 - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
 - [Revisando um pull request](#revisando-um-pull-request)
 - [Avisos Finais](#avisos-finais)
@@ -44,11 +34,11 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 Nesse projeto, você será capaz de:
 
-* Utilizar a _Context API_ do **React** para gerenciar estado.
-* Utilizar o _React Hook useState_;
-* Utilizar o _React Hook useContext_;
-* Utilizar o _React Hook useEffect_;
-* Criar _React Hooks_ customizados.
+- Utilizar a _Context API_ do **React** para gerenciar estado.
+- Utilizar o _React Hook useState_;
+- Utilizar o _React Hook useContext_;
+- Utilizar o _React Hook useEffect_;
+- Criar _React Hooks_ customizados.
 
 ---
 
@@ -57,68 +47,6 @@ Nesse projeto, você será capaz de:
 ## O que deverá ser desenvolvido
 
 Você vai desenvolver uma lista com filtros de planetas do universo de Star Wars usando **Context API e Hooks** para controlar os estados globais.
-
----
-
-## Desenvolvimento
-
-Este repositório já contém um _template_ de uma aplicação React criado e configurado. Após clonar o projeto e instalar as dependências (mais sobre isso abaixo), você **poderá** criara a sua branch e iniciar o trabalho.
-
----
-
-## Data de entrega
-
-  - Projeto individual.
-
-  - Serão `3` dias de projeto.
-  
-  - Data de entrega para avaliação final do projeto: `27/09/2021 - 14:00h`.
-
----
-
-# Instruções para entregar seu projeto:
-
-## Antes de começar a desenvolver
-
-1. Clone o repositório
-  * `git clone git@github.com:tryber/sd-013-a-project-starwars-planets-search.git`
-  * Entre na pasta do repositório que você acabou de clonar:
-    * `cd sd-013-a-project-starwars-planets-search`
-
-2. Instale as dependências e inicialize o projeto
-  * Instale as dependências:
-    * `npm install`
-  * Inicialize o projeto:
-    * `npm start` (uma nova página deve abrir no seu navegador com um texto simples)
-  * Verifique que os testes estão executando:
-    * `npm test` (os testes devem rodar e falhar)
-
-3. Crie uma branch a partir da branch `master`
-
-  * Verifique que você está na branch `master`
-    * Exemplo: `git branch`
-  * Se não estiver, mude para a branch `master`
-    * Exemplo: `git checkout master`
-  * Agora, crie uma branch onde você vai guardar os commits do seu projeto
-
----
-
-## Durante o desenvolvimento
-
-* Faça `commits` das alterações que você fizer no código regularmente
-
-* Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto
-
-* Os comandos que você utilizará com mais frequência são:
-  1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
-  2. `git add` _(para adicionar arquivos ao stage do Git)_
-  3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
-  4. `git push -u nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
-  5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
-
----
-
-# Como desenvolver
 
 ## Linter
 
@@ -148,7 +76,7 @@ Por exemplo, se o requisito pedir "crie um botão e adicione o id de teste (ou `
 ou
 
 ```html
-<a data-testid="my-action"><a/>
+<a data-testid="my-action"><a /></a>
 ```
 
 O atributo `data-testid="my-action"` servirá para a React Testing Library identificar o elemento e, dessa forma, será possível realizar os testes unitários focados no comportamento da aplicação.
@@ -173,8 +101,6 @@ Caso queira avaliar apenas um tópico do requisito, você também pode usar o `.
 ![image](it-only.png)
 ![image](only-one-green.png)
 
-
-
 # Requisitos do projeto
 
 ## Lista de requisitos
@@ -188,6 +114,7 @@ A API a ser consultada está [nesse link](https://swapi-trybe.herokuapp.com/api/
 A tabela deve ter uma primeira linha com os headers e as demais com as informações de cada campo.
 
 O que será verificado:
+
 ```
 - Realiza uma requisição para a API
 - Preenche a tabela com os dados retornados
@@ -195,7 +122,7 @@ O que será verificado:
 - Verifica se a tabela tem uma linha para cada planeta retornado
 ```
 
-### 2 - Filtre a tabela através de um texto, inserido num *campo de texto*, exibindo somente os planetas cujos nomes incluam o texto digitado
+### 2 - Filtre a tabela através de um texto, inserido num _campo de texto_, exibindo somente os planetas cujos nomes incluam o texto digitado
 
 Ele deve atualizar a tabela com os planetas que se encaixam no filtro à medida que o nome é digitado, sem ter que apertar um botão para efetuar a filtragem. Por exemplo, se digitar "Tatoo", o planeta "Tatooine" deve ser exibido. Você deve usar **Context API e Hooks** para fazer o gerenciamento do estado da aplicação e o texto digitado deve ser salvo num campo `filters: { filterByName: { name } }`. Por exemplo:
 
@@ -203,7 +130,7 @@ Ele deve atualizar a tabela com os planetas que se encaixam no filtro à medida 
 {
   filters: {
     filterByName: {
-      name: 'Tatoo'
+      name: "Tatoo";
     }
   }
 }
@@ -212,6 +139,7 @@ Ele deve atualizar a tabela com os planetas que se encaixam no filtro à medida 
 O campo de texto deve possuir a propriedade `data-testid='name-filter'` para que a avaliação automatizada funcione.
 
 O que será verificado:
+
 ```
 - Renderiza o campo de texto para o filtro de nomes
 - Filtra os planetas que possuem a letra "o" no nome
@@ -223,14 +151,15 @@ O que será verificado:
 
 Ele funcionará com três seletores:
 
-  - O primeiro deve abrir um dropdown que permita a quem usa selecionar uma das seguintes colunas: `population`, `orbital_period`, `diameter`, `rotation_period` e `surface_water`. Deve ser uma tag `select` com a propriedade `data-testid='column-filter'`;
-  - O segundo deve determinar se a faixa de valor será `maior que`, `menor que` ou `igual a` o numero que virá a seguir. Uma tag `select` com a propriedade `data-testid='comparison-filter'`;
-  - O terceiro deve ser uma caixa de texto que só aceita números. Essa caixa deve ser uma tag `input` com a propriedade `data-testid='value-filter'`;
-  - Deve haver um botão para acionar o filtro, com a propriedade `data-testid='button-filter'`.
+- O primeiro deve abrir um dropdown que permita a quem usa selecionar uma das seguintes colunas: `population`, `orbital_period`, `diameter`, `rotation_period` e `surface_water`. Deve ser uma tag `select` com a propriedade `data-testid='column-filter'`;
+- O segundo deve determinar se a faixa de valor será `maior que`, `menor que` ou `igual a` o numero que virá a seguir. Uma tag `select` com a propriedade `data-testid='comparison-filter'`;
+- O terceiro deve ser uma caixa de texto que só aceita números. Essa caixa deve ser uma tag `input` com a propriedade `data-testid='value-filter'`;
+- Deve haver um botão para acionar o filtro, com a propriedade `data-testid='button-filter'`.
 
 A combinação desses três seletores deve filtrar os dados da tabela de acordo com a coluna correspondente e com os valores escolhidos. Por exemplo:
-  - A seleção `population | maior que | 100000` - Seleciona somente planetas com mais de 100000 habitantes.
-  - A seleção `diameter | menor que | 8000` - Seleciona somente planetas com diâmetro menor que 8000.
+
+- A seleção `population | maior que | 100000` - Seleciona somente planetas com mais de 100000 habitantes.
+- A seleção `diameter | menor que | 8000` - Seleciona somente planetas com diâmetro menor que 8000.
 
 Você deve usar **Context API e Hooks** para fazer o gerenciamento do estado da aplicação. No contexto, esses valores devem ser salvos nos campos `filters { filterByName: { name }, filterByNumericValues: [{ column, comparison, value }] }`. Por exemplo:
 
@@ -254,6 +183,7 @@ Você deve usar **Context API e Hooks** para fazer o gerenciamento do estado da 
 ```
 
 O que será verificado:
+
 ```
 - Renderiza o filtro de coluna
 - Renderiza o filtro de comparação
@@ -293,6 +223,7 @@ Por exemplo: O primeiro filtro tem as seguintes seleções: `population | maior 
 ```
 
 O que será verificado:
+
 ```
 - Filtra por população e o remove das opções
 ```
@@ -304,6 +235,7 @@ O `button` com o ícone de `x` deve existir em cada filtro de valores numéricos
 A coluna que este filtro selecionava deve passar a ficar disponível nos dropdowns dos demais filtros já presentes na tela. Você deve usar **Context API e Hooks** para fazer o gerenciamento do estado da aplicação. Cada filtro deve possuir a propriedade `data-testid='filter'`, com um `button` em seu interior com o texto `X`.
 
 O que será verificado:
+
 ```
 - Adiciona um filtro e verifica se a tabela foi atualizada com as informações filtradas, depois remove o filtro e verifica se os valores da tabela voltaram ao original.
 - Adiciona dois filtros e verifica se a tabela foi atualizada com as informações filtradas, depois remove os filtros e verifica se os valores da tabela voltaram ao original.
@@ -337,36 +269,8 @@ O dropdown deve ser um elemento `select` com a propriedade `data-testid='column-
 Adicione o atributo `data-testid` com o valor `planet-name` em todos os elementos da tabela que possuem o nome de um planeta.
 
 O que será verificado:
+
 ```
 - Verifica ordenação inicial
 - Ordena os planetas do mais populoso para o menos populoso
 ```
-
----
-
-# Depois de terminar o desenvolvimento (opcional)
-
-Para **"entregar"** seu projeto, siga os passos a seguir:
-
-* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas
-  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**
-  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**
-  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-00`
-
----
-
-# Revisando um pull request
-
-Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os _Pull Requests_.
-
----
-
-# Avisos Finais
-
-Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
-
-Link: [Avaliação](https://be-trybe.typeform.com/to/ZTeR4IbH)
-
-O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no _README_. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
-
----
